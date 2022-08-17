@@ -1,0 +1,21 @@
+{
+	"returnInfo": {
+		"returnCode": "SUC0000",
+		"errorMsg": null
+	},
+	"layoutCode": "rtm",
+	"componentCode": "digital1",
+	"componentName": "数字显示",
+	"componentType": "Digital",
+	"config": "{\n    \"title\": \"数字显示\", \n    \"value\": 0, \n    \"unit\": \"个\"\n}",
+	"httpMethod": "POST",
+	"url": "http://5tm_*/_search",
+	"headerJson": "{\n    \"Authorization\": \"Basic YWR******g=\"\n}",
+	"reqJson": "{}",
+	"responseTtl": 0,
+	"responseAnalysis": "\nif(jsonData.hits){\n\toption.value = jsonData.hits.total;\n}",
+	"refreshRate": 1000,
+	"active": 1,
+	"createTime": "2022-05-27T09:29:07.000+00:00",
+	"editTime": "2022-06-27T06:24:29.000+00:00"
+}

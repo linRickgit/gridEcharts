@@ -1,0 +1,7 @@
+{
+	"returnInfo": {
+		"returnCode": "SUC0000",
+		"errorMsg": null
+	},
+	"result": "{\"took\":4,\"timed_out\":false,\"_shards\":{\"total\":30,\"successful\":30,\"skipped\":0,\"failed\":0},\"hits\":{\"total\":45365,\"max_score\":0.0,\"hits\":[]}}"
+}

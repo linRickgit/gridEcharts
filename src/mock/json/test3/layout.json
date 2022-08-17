@@ -1,0 +1,22 @@
+
+{
+    "returnInfo": {
+        "returnCode": "SUC0000", 
+        "errorMsg": null
+    }, 
+    "configList": [
+        
+        {
+            "layoutConfig": "{\"x\":0,\"y\":0,\"w\":30,\"h\":4,\"i\":\"head\",\"componentType\":\"HeadTitle\",\"moved\":false}"
+        }, 
+
+        {
+            "layoutConfig": "{\"x\":0,\"y\":7,\"w\":5,\"h\":4,\"i\":\"digital1\",\"componentType\":\"Digital\",\"moved\":false}"
+        },
+    
+        {
+            "layoutConfig": "{\"x\":8,\"y\":7,\"w\":12,\"h\":13,\"i\":\"table3\",\"componentType\":\"TableDatav\",\"moved\":false}"
+        }
+    
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "returnInfo": {
+        "returnCode": "SUC0000", 
+        "errorMsg": null
+    }, 
+    "layoutCode": "follow", 
+    "componentCode": "head", 
+    "componentName": "标题", 
+    "componentType": "HeadTitle", 
+    "config": null, 
+    "httpMethod": null, 
+    "url": null, 
+    "headerJson": null, 
+    "reqJson": null, 
+    "responseTtl": 0, 
+    "responseAnalysis": null, 
+    "refreshRate": -1, 
+    "active": 1, 
+    "createTime": "2022-03-11T01:01:39.000+00:00", 
+    "editTime": "2022-06-06T06:55:00.000+00:00"
+}
+
+
+
+

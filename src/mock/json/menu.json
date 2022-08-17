@@ -1,0 +1,33 @@
+{
+    "returnInfo": {
+        "returnCode": "SUC0000", 
+        "errorMsg": null
+    }, 
+    "menus": [
+        {
+            "name": "大屏", 
+            "icon": "icon-gongsiguanli2", 
+            "path": null, 
+            "children": [
+                {
+                    "name": "大屏监控1", 
+                    "icon": null, 
+                    "path": "/bigScreen/test1", 
+                    "children": null
+                }, 
+                {
+                    "name": "大屏监控2", 
+                    "icon": "icon-guanliwenzhang", 
+                    "path": "/bigScreen/test2", 
+                    "children": null
+                }
+            ]
+        }, 
+        {
+            "name": "大屏监控3", 
+            "icon": "icon-chart-area", 
+            "path": "/bigScreen/test3", 
+            "children": null
+        }
+    ]
+}

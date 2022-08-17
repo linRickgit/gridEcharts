@@ -1,0 +1,13 @@
+@function r($px) {
+    @if $px==0 {
+      @return 0;
+    }
+    @return $px / 1920 * 100vw;
+  }
+  @function h($px) {
+    @if $px==0 {
+      @return 0;
+    }
+    @return $px / 950 * 100vh;
+  }
+  $theme_text:#048dfd; // 主题字颜色

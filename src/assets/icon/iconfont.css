@@ -1,0 +1,307 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3387278 */
+  src: url('iconfont.woff2?t=1660647757104') format('woff2'),
+       url('iconfont.woff?t=1660647757104') format('woff'),
+       url('iconfont.ttf?t=1660647757104') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 20px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-guanliwenzhang:before {
+  content: "\e671";
+}
+
+.icon-gongsiguanli:before {
+  content: "\e602";
+}
+
+.icon-gongsiguanli1:before {
+  content: "\e673";
+}
+
+.icon-24gf-lastCircle:before {
+  content: "\ea7e";
+}
+
+.icon-gongsiguanli2:before {
+  content: "\e6b2";
+}
+
+.icon-yunduanshangchuan:before {
+  content: "\ec1d";
+}
+
+.icon-sousuobianxiao:before {
+  content: "\ec32";
+}
+
+.icon-sousuofangda:before {
+  content: "\ec33";
+}
+
+.icon-dingwei:before {
+  content: "\ec34";
+}
+
+.icon-chucun:before {
+  content: "\ec5e";
+}
+
+.icon-yunduanshuaxin:before {
+  content: "\ec60";
+}
+
+.icon-yunhang:before {
+  content: "\ec61";
+}
+
+.icon-liebiao:before {
+  content: "\ec6b";
+}
+
+.icon-mysql:before {
+  content: "\ec6d";
+}
+
+.icon-chengshi:before {
+  content: "\ec70";
+}
+
+.icon-tixingshixin:before {
+  content: "\ec72";
+}
+
+.icon-wuxiandianbo:before {
+  content: "\ec79";
+}
+
+.icon-fuzhi:before {
+  content: "\ec7a";
+}
+
+.icon-shanchu:before {
+  content: "\ec7b";
+}
+
+.icon-drag:before {
+  content: "\e769";
+}
+
+.icon-ellipsis-vertical:before {
+  content: "\e76a";
+}
+
+.icon-gift:before {
+  content: "\e771";
+}
+
+.icon-link:before {
+  content: "\e772";
+}
+
+.icon-poweroff:before {
+  content: "\e774";
+}
+
+.icon-key:before {
+  content: "\e775";
+}
+
+.icon-safety-certificate:before {
+  content: "\e776";
+}
+
+.icon-supervise:before {
+  content: "\e777";
+}
+
+.icon-chart-area:before {
+  content: "\e78f";
+}
+
+.icon-chart-line:before {
+  content: "\e790";
+}
+
+.icon-display-code:before {
+  content: "\e792";
+}
+
+.icon-display-arrow-right:before {
+  content: "\e793";
+}
+
+.icon-display-arrow-left:before {
+  content: "\e794";
+}
+
+.icon-mobile-alt:before {
+  content: "\e79a";
+}
+
+.icon-aliwangwang:before {
+  content: "\e79d";
+}
+
+.icon-database-fill:before {
+  content: "\e7a6";
+}
+
+.icon-eyeslash-fill:before {
+  content: "\e7aa";
+}
+
+.icon-eye-fill:before {
+  content: "\e7ab";
+}
+
+.icon-inboxin-fill:before {
+  content: "\e7b2";
+}
+
+.icon-databaseset-fill:before {
+  content: "\e7b4";
+}
+
+.icon-layergroup-fill:before {
+  content: "\e7b5";
+}
+
+.icon-pausecircle-fill:before {
+  content: "\e7cb";
+}
+
+.icon-stopcircle-fill:before {
+  content: "\e7cc";
+}
+
+.icon-playcircle-fill:before {
+  content: "\e7cd";
+}
+
+.icon-clouddownload-fill:before {
+  content: "\e7d9";
+}
+
+.icon-cloudupload-fill:before {
+  content: "\e7da";
+}
+
+.icon-minus-circle-fill:before {
+  content: "\e7df";
+}
+
+.icon-plus-circle-fill:before {
+  content: "\e7e0";
+}
+
+.icon-times-circle-fill:before {
+  content: "\e7e1";
+}
+
+.icon-check-circle-fill:before {
+  content: "\e7e2";
+}
+
+.icon-align-left:before {
+  content: "\e7fd";
+}
+
+.icon-border-bottom:before {
+  content: "\e7fe";
+}
+
+.icon-pic-center:before {
+  content: "\e802";
+}
+
+.icon-collection:before {
+  content: "\e814";
+}
+
+.icon-backspace:before {
+  content: "\e85c";
+}
+
+.icon-star-circle:before {
+  content: "\e85f";
+}
+
+.icon-user-circle:before {
+  content: "\e860";
+}
+
+.icon-bianjisekuai:before {
+  content: "\ec7c";
+}
+
+.icon-resource:before {
+  content: "\e867";
+}
+
+.icon-zuoduiqi:before {
+  content: "\ec86";
+}
+
+.icon-zuoyouduiqi:before {
+  content: "\ec87";
+}
+
+.icon-shebeikaifa:before {
+  content: "\ec8b";
+}
+
+.icon-dianzan_kuai:before {
+  content: "\ec8c";
+}
+
+.icon-shoucang_shixin:before {
+  content: "\eca6";
+}
+
+.icon-shoucang:before {
+  content: "\eca7";
+}
+
+.icon-shengyinwu:before {
+  content: "\eca8";
+}
+
+.icon-shengyinjingyin:before {
+  content: "\eca9";
+}
+
+.icon-zhunbeiliangchan:before {
+  content: "\ecaa";
+}
+
+.icon-shebeikaifa1:before {
+  content: "\ecac";
+}
+
+.icon-duigou_kuai:before {
+  content: "\ed1d";
+}
+
+.icon-cuocha_kuai:before {
+  content: "\ed1e";
+}
+
+.icon-jia_sekuai:before {
+  content: "\ed21";
+}
+
+.icon-applicationgroup:before {
+  content: "\e89e";
+}
+
+.icon-WIFI:before {
+  content: "\e76c";
+}
+

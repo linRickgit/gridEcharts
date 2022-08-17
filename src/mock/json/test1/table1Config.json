@@ -1,0 +1,21 @@
+{
+	"returnInfo": {
+		"returnCode": "SUC0000",
+		"errorMsg": null
+	},
+	"layoutCode": "test1",
+	"componentCode": "table1",
+	"componentName": "成功数",
+	"componentType": "ApacheECharts",
+	"config": "{\n    \"title\": {\n        \"text\": \"\", \n        \"textStyle\": {\n            \"fontWeight\": \"normal\", \n            \"color\": \"white\"\n        }\n    }, \n    \"color\":[\"#91cc75\"],\n    \"grid\": {\n        \"left\": \"2%\", \n        \"top\": \"15%\", \n        \"right\": \"5%\", \n        \"bottom\": \"2%\", \n        \"containLabel\": true\n    }, \n    \"tooltip\": {\n        \"trigger\": \"axis\"\n    }, \n    \"legend\": {\n        \"inactiveColor\": \"rgba(119, 136, 153, 1)\", \n        \"textStyle\": {\n            \"color\": \"rgba(0, 191, 255, 1)\"\n        }\n    }, \n    \"xAxis\": {\n        \"type\": \"category\", \n        \"boundaryGap\": true, \n        \"axisLine\": {\n            \"lineStyle\": {\n                \"color\": \"white\", \n                \"width\": 2\n            }\n        }, \n        \"data\": [\n            \"one\", \n            \"two\", \n            \"three\"\n        ]\n    }, \n    \"yAxis\": {\n        \"type\": \"value\", \n        \"splitLine\": {\n            \"show\": false\n        }, \n        \"axisLine\": {\n            \"lineStyle\": {\n                \"color\": \"white\", \n                \"width\": 2\n            }\n        }, \n        \"axisLabel\": {\n            \"formatter\": \"{value} 个\"\n        }\n    }, \n    \"series\": [\n        {\n            \"name\": \"成功数\", \n            \"type\": \"line\", \n            \"data\": [\n                65, \n                56, \n                89\n            ]\n        }\n      \n    ]\n}",
+	"httpMethod": "POST",
+	"url": "http://5t*/_search",
+	"headerJson": "{\n    \"Authorization\": \"Basic YW=\"\n}",
+	"reqJson": "{\n  \"size\": 0,\n  \"_source\": {\n    \"excludes\": []\n  },\n  \"aggs\": {\n    \"2\": {\n      \"date_histogram\": {\n        \"field\": \"timestamp\",\n        \"interval\": \"1d\",\n        \"time_zone\": \"Asia/Shanghai\",\n        \"min_doc_count\": 1,\n        \"format\": \"yyyy-MM-dd\"\n        \n      }\n    }\n  },\n  \"version\": true,\n  \"stored_fields\": [\n    \"*\"\n  ],\n  \"script_fields\": {},\n  \"docvalue_fields\": [\n    \"timestamp\"\n  ],\n  \"query\": {\n    \"bool\": {\n      \"must\": [\n        {\n          \"match_all\": {}\n        },\n        {\n          \"match_all\": {}\n        },\n        {\n          \"range\": {\n            \"timestamp\": {\n              \"gte\": \"now-90d/d\",\n              \"lte\":    \"now\",\n              \"format\": \"epoch_millis\"\n            }\n          }\n        }\n      ],\n      \"filter\": [],\n      \"should\": [],\n      \"must_not\": []\n    }\n  },\n  \"highlight\": {\n    \"pre_tags\": [\n      \"@kibana-highlighted-field@\"\n    ],\n    \"post_tags\": [\n      \"@/kibana-highlighted-field@\"\n    ],\n    \"fields\": {\n      \"*\": {}\n    },\n    \"fragment_size\": 2147483647\n  }\n}",
+	"responseTtl": 0,
+	"responseAnalysis": "let new_xAxis_data = [];\nlet new_series_data = [];\n\nif(jsonData.aggregations){\n\tlet buckets = jsonData.aggregations[2].buckets;\n\tfor(let i=0; i<buckets.length; i++){\n\t  new_xAxis_data.push(buckets[i].key_as_string);\n\t  new_series_data.push(buckets[i].doc_count);\n\t}\n}\noption.xAxis.data = new_xAxis_data;\noption.series = [{\n  type: 'line',\n  data: new_series_data\n}]; ",
+	"refreshRate": 1000,
+	"active": 1,
+	"createTime": "2022-04-01T07:35:31.000+00:00",
+	"editTime": "2022-06-27T06:22:45.000+00:00"
+}

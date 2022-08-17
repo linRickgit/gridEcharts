@@ -1,0 +1,15 @@
+
+
+{
+    "returnInfo": {
+        "returnCode": "SUC0000", 
+        "errorMsg": null
+    }, 
+    "configList": [
+
+        {
+            "layoutConfig": "{\"x\":8,\"y\":7,\"w\":9,\"h\":13,\"i\":\"table2\",\"componentType\":\"ApacheECharts\",\"moved\":false}"
+        }
+    
+    ]
+}

@@ -1,0 +1,21 @@
+{
+	"returnInfo": {
+		"returnCode": "SUC0000",
+		"errorMsg": null
+	},
+	"layoutCode": "test3",
+	"componentCode": "table3",
+	"componentName": "表格",
+	"componentType": "TableDatav",
+	"config": "{\n    \"header\": [\n        \"接口\", \n        \"平均值\", \n        \"最大值\"\n    ], \n    \"data\": [\n        [\n            \"行1列1\", \n            \"行1列2\", \n            \"行1列3\"\n        ], \n        [\n            \"行2列1\", \n            \"行2列2\", \n            \"行2列3\"\n        ], \n        [\n            \"行3列1\", \n            \"行3列2\", \n            \"行3列3\"\n        ], \n        [\n            \"行4列1\", \n            \"行4列2\", \n            \"行4列3\"\n        ], \n        [\n            \"行5列1\", \n            \"行5列2\", \n            \"行5列3\"\n        ], \n        [\n            \"行6列1\", \n            \"行6列2\", \n            \"行6列3\"\n        ], \n        [\n            \"行7列1\", \n            \"行7列2\", \n            \"行7列3\"\n        ], \n        [\n            \"行8列1\", \n            \"行8列2\", \n            \"行8列3\"\n        ], \n        [\n            \"行9列1\", \n            \"行9列2\", \n            \"行9列3\"\n        ], \n        [\n            \"行10列1\", \n            \"行10列2\", \n            \"行10列3\"\n        ]\n    ], \n    \"index\": true, \n    \"rowNum\": 6,\n    \"waitTime\":3000,\n    \"headerBGC\": \"#6D8346\",\n    \"columnWidth\": [\n        40,300,80,80\n    ], \n    \"align\": [\n        \"center\"\n    ], \n    \"carousel\": \"page\"\n}",
+	"httpMethod": "POST",
+	"url": "http://5t*/_search",
+	"headerJson": "{\n    \"Authorization\": \"Basic YWg=\"\n}",
+	"reqJson": "{\n    \"size\": 0,\n    \"_source\": {\n        \"excludes\": [ ]\n    },\n    \"aggs\": {\n        \"3\": {\n            \"terms\": {\n                \"field\": \"log.requestUrl\",\n                \"size\": 500,\n                \"order\": {\n                    \"1\": \"desc\"\n                }\n            },\n            \"aggs\": {\n                \"1\": {\n                    \"avg\": {\n                        \"field\": \"log.processTime\"\n                    }\n                },\n                \"2\": {\n                    \"max\": {\n                        \"field\": \"log.processTime\"\n                    }\n                }\n            }\n        }\n    },\n    \"version\": true,\n    \"stored_fields\": [\n        \"*\"\n    ],\n    \"script_fields\": { },\n    \"docvalue_fields\": [\n        \"callStack.subTimestamp\",\n        \"log.beginTime\",\n        \"timestamp\"\n    ],\n    \"query\": {\n        \"bool\": {\n            \"must\": [\n                {\n                    \"query_string\": {\n                        \"query\": \"log.logType:calllog AND NOT *liveness*\",\n                        \"analyze_wildcard\": true,\n                        \"default_field\": \"*\"\n                    }\n                },\n                {\n                    \"match_all\": { }\n                },\n                {\n                    \"range\": {\n                        \"timestamp\": {\n                            \"gte\": \"now-40d/d\",\n                            \"lte\": \"now\",\n                            \"format\": \"epoch_millis\",\n                            \"time_zone\": \"+08:00\"\n                        }\n                    }\n                }\n            ],\n            \"filter\": [ ],\n            \"should\": [ ],\n            \"must_not\": [ ]\n        }\n    },\n    \"highlight\": {\n        \"pre_tags\": [\n            \"@kibana-highlighted-field@\"\n        ],\n        \"post_tags\": [\n            \"@/kibana-highlighted-field@\"\n        ],\n        \"fields\": {\n            \"*\": { }\n        },\n        \"fragment_size\": 2147483647\n    }\n}",
+	"responseTtl": 0,
+	"responseAnalysis": "let buckets = jsonData.aggregations[3].buckets;\nif (buckets && buckets.length > 0) {\n\tlet new_data = [];\n\tfor (let i = 0; i < buckets.length; i++) {\n\t\tlet bucket = buckets[i];\n\t\tnew_data.push([\n\t\t\tbucket.key,\n\t\t\tbucket[1].value.toFixed(2),\n\t\t\tbucket[2].value\n\t\t]);\n\t}\n\toption.data = new_data;\n}",
+	"refreshRate": 600,
+	"active": 1,
+	"createTime": "2022-03-10T11:08:14.000+00:00",
+	"editTime": "2022-06-27T06:23:51.000+00:00"
+}

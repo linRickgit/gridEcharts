@@ -1,0 +1,21 @@
+{
+	"returnInfo": {
+		"returnCode": "SUC0000",
+		"errorMsg": null
+	},
+	"layoutCode": "test2",
+	"componentCode": "table2",
+	"componentName": "系统情况",
+	"componentType": "ApacheECharts",
+	"config": "{\n    \"title\": {\n        \"text\": \"title\", \n        \"textStyle\": {\n            \"fontWeight\": \"normal\", \n            \"color\": \"white\"\n        }\n    }, \n    \"grid\": {\n        \"left\": \"10\", \n        \"top\": \"30\", \n        \"right\": \"10\", \n        \"bottom\": \"0\", \n        \"containLabel\": true\n    }, \n    \"xAxis\": {\n        \"type\": \"value\", \n        \"splitLine\": {\n            \"show\": false\n        }, \n        \"axisLabel\": {\n            \"show\": false\n        }, \n        \"axisTick\": {\n            \"show\": false\n        }, \n        \"axisLine\": {\n            \"show\": false\n        }\n    }, \n    \"yAxis\": [\n        {\n            \"type\": \"category\", \n            \"axisTick\": {\n                \"show\": false\n            }, \n            \"axisLine\": {\n                \"show\": false\n            }, \n            \"axisLabel\": {\n                \"color\": \"black\", \n                \"fontSize\": 14, \n                \"textStyle\": {\n                    \"color\": \"#fff\"\n                }\n            }, \n            \"data\": [\n                \"a\", \n                \"b\", \n                \"c\"\n            ], \n            \"inverse\": true\n        }, \n        {\n            \"type\": \"category\", \n            \"axisTick\": {\n                \"show\": false\n            }, \n            \"axisLine\": {\n                \"show\": false\n            }, \n            \"axisLabel\": {\n                \"formatter\": \"{value}%\", \n                \"color\": \"rgba(255, 255, 255, 1)\"\n            }, \n            \"data\": [\n                10, \n                55, \n                80\n            ], \n            \"inverse\": true\n        }\n    ], \n    \"series\": [\n        {\n            \"name\": \"条\", \n            \"type\": \"bar\", \n            \"barWidth\": 18, \n            \"data\": [\n                10, \n                55, \n                80\n            ], \n            \"barCategoryGap\": 20, \n            \"itemStyle\": {\n                \"normal\": {\n                    \"barBorderRadius\": 10\n                }\n            }, \n            \"zlevel\": 1\n        }, \n        {\n            \"name\": \"进度条背景\", \n            \"type\": \"bar\", \n            \"barGap\": \"-100%\", \n            \"barWidth\": 19, \n            \"data\": [\n                100, \n                100, \n                100\n            ], \n            \"color\": \"#2e5384\", \n            \"itemStyle\": {\n                \"normal\": {\n                    \"barBorderRadius\": 10\n                }\n            }\n        }\n    ]\n}",
+	"httpMethod": "GET",
+	"url": "http://memory/getList",
+	"headerJson": "{}",
+	"reqJson": null,
+	"responseTtl": 0,
+	"responseAnalysis": "console.log(jsonData)\nlet nameArr = [];\nlet valueArr = [];\nlet backgroundArr = [];\nfor (let i = 0; i < jsonData.memoryList.length; i++) {\n\tnameArr.push(jsonData.memoryList[i].clusterName);\n\tlet usedMemory = jsonData.memoryList[i].usedMemory;\n\tlet maxMemory = jsonData.memoryList[i].maxMemory;\n\tlet value =\t(maxMemory == 0) ? 0 : (100*(usedMemory / maxMemory)).toFixed(2);\n\tvalueArr.push(value);\n\tbackgroundArr.push(100);\n}\n\noption.yAxis[0].data = nameArr;\noption.yAxis[1].data = valueArr;\noption.series[0].data = valueArr;\noption.series[1].data = backgroundArr;\n//颜色\noption.series[0].itemStyle.normal.color = new echarts.graphic.LinearGradient(0, 0, 1, 0, [\n                  {\n                    offset: 0,\n                    color: \"#22b6ed\",\n                  },\n                  {\n                    offset: 1,\n                    color: \"#3fE279\",\n                  },\n                ]);",
+	"refreshRate": 10000,
+	"active": 1,
+	"createTime": "2022-05-18T09:42:47.000+00:00",
+	"editTime": "2022-06-27T06:35:44.000+00:00"
+}

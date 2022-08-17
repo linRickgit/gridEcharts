@@ -1,0 +1,7 @@
+{
+    "returnInfo": {
+        "returnCode": "SUC0000", 
+        "errorMsg": null
+    }, 
+    "result": "{\"returnInfo\":{\"returnCode\":\"SUC0000\",\"errorMsg\":null},\"memoryList\":[{\"clusterName\":\"性能\",\"usedMemory\":16047920232,\"maxMemory\":20548681728},{\"clusterName\":\"存储\",\"usedMemory\":410078552,\"maxMemory\":2732064768},{\"clusterName\":\"拦截\",\"usedMemory\":683139696,\"maxMemory\":3089734041},{\"clusterName\":\"缓存\",\"usedMemory\":274616856,\"maxMemory\":764726475}]}"
+}

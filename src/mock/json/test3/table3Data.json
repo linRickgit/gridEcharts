@@ -1,0 +1,7 @@
+{
+    "returnInfo": {
+        "returnCode": "SUC0000", 
+        "errorMsg": null
+    }, 
+    "result": "{\"took\":225,\"timed_out\":false,\"_shards\":{\"total\":36,\"successful\":36,\"skipped\":0,\"failed\":0},\"hits\":{\"total\":464,\"max_score\":0.0,\"hits\":[]},\"aggregations\":{\"3\":{\"doc_count_error_upper_bound\":0,\"sum_other_doc_count\":0,\"buckets\":[{\"key\":\"http://serate\",\"doc_count\":8,\"1\":{\"value\":882.0},\"2\":{\"value\":1814.0}},{\"key\":\"http:/recycle\",\"doc_count\":4,\"1\":{\"value\":849.75},\"2\":{\"value\":1616.0}},{\"key\":\"http://cghj\",\"doc_count\":420,\"1\":{\"value\":193.53095238095239},\"2\":{\"value\":63420.0}},{\"key\":\"http://qwe\",\"doc_count\":10,\"1\":{\"value\":167.9},\"2\":{\"value\":247.0}},{\"key\":\"http://abc\",\"doc_count\":22,\"1\":{\"value\":48.54545454545455},\"2\":{\"value\":119.0}}]}}}"
+}
